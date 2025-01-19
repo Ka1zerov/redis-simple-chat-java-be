@@ -43,22 +43,6 @@ export const logOut = () => {
 };
 
 /**
- * Function for checking which deployment urls exist.
- *
- * @returns {Promise<{
- *   heroku?: string;
- *   google_cloud?: string;
- *   vercel?: string;
- *   github?: string;
- * }>}
- */
-export const getButtonLinks = () => {
-  return axios.get(url('/links'))
-    .then(x => x.data)
-    .catch(_ => null);
-};
-
-/**
  * @returns {Promise<Array<{ names: string[]; id: string }>>}
  */
 export const getRooms = async (userId) => {
